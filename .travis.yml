@@ -18,7 +18,7 @@ install:
 
 after_script:
   - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
-  - docker image push $DOCKER_USERNAME/udagram-deployment
+  - docker image push $DOCKER_USERNAME/udagram-reverseproxy
   - docker image push $DOCKER_USERNAME/udagram-restapi-feed
   - docker image push $DOCKER_USERNAME/udagram-restapi-user
   - docker image push $DOCKER_USERNAME/udagram-frontend
